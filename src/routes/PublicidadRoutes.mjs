@@ -11,7 +11,7 @@ const publicidadRutes = express.Router()
 publicidadRutes.put('/:id/editar', hasPermission('editar_publicidad'), validarPublicidad(), validacionErrores, actualizarPublicidad)
 publicidadRutes.get('/:id/editar', hasPermission('ver_publicidad'), obtenerPublicidad)
 publicidadRutes.delete('/:id/eliminar', hasPermission('eliminar_publicidad'), eliminarPublicidad)
-publicidadRutes.post('/crear', hasPermission('crear_pubicidad'), validarPublicidad(), validacionErrores, crearPublicidad)
+publicidadRutes.post('/crear', hasPermission('crear_publicidad'), validarPublicidad(), validacionErrores, crearPublicidad)
 
 publicidadRutes.get('/mio',hasPermission('ver_publicidades_por_doctor'), obtenerTodoXDoctor)
 
